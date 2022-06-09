@@ -1,6 +1,6 @@
-//转换
 #include <Windows.h>
 #include <Winhttp.h>
+//转换
 static PCHAR WideStrToMultiStr(PWCHAR WideStr)
 {
 	ULONG nBytes;
