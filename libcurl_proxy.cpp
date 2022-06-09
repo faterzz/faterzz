@@ -24,7 +24,13 @@ static PCHAR WideStrToMultiStr(PWCHAR WideStr)
 	return MultiStr;
 }
 	
-	
+QString coverPCharToString(LPWSTR pStr)	
+{
+    PCHAR charstr1 = WideStrToMultiStr(pStr);
+    QString resString = QString::fromLocal8Bit(charstr1);
+	return resString;
+}
+
 WINHTTP_CURRENT_USER_IE_PROXY_CONFIG pProxyConfig;
 pProxyConfig.fAutoDetect = TRUE;
 bool bState = WinHttpGetIEProxyConfigForCurrentUser(&pProxyConfig);
