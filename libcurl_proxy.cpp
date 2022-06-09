@@ -26,8 +26,8 @@ static PCHAR WideStrToMultiStr(PWCHAR WideStr)
 	
 QString covertPCharToString(LPWSTR pStr)	
 {
-    PCHAR charstr1 = WideStrToMultiStr(pStr);
-    return = QString::fromLocal8Bit(charstr1);
+	PCHAR charstr1 = WideStrToMultiStr(pStr);
+    	return = QString::fromLocal8Bit(charstr1);
 }
 
 void setIEProxy() 
